@@ -1,10 +1,10 @@
 import React from 'react';
-import { MonitorIcon, BarChart3Icon, ChevronRightIcon } from 'lucide-react';
+import { MonitorIcon, BarChart3Icon, ClipboardListIcon, GlobeIcon, ChevronRightIcon } from 'lucide-react';
 
 const LOGO_URL = "./Logo_For_Dark_Bg_(1).png";
 
 interface OverviewProps {
-  onSelect: (deck: 'platform' | 'asset') => void;
+  onSelect: (deck: 'platform' | 'asset' | 'plan' | 'basin') => void;
 }
 
 export function Overview({ onSelect }: OverviewProps) {
@@ -30,7 +30,7 @@ export function Overview({ onSelect }: OverviewProps) {
 
       {/* Content */}
       <div className="flex-1 flex flex-col items-center justify-center px-6">
-        <div className="text-center mb-12 animate-slide-up">
+        <div className="text-center mb-10 animate-slide-up">
           <h2 className="font-display text-white/80 tracking-[0.2em] uppercase mb-3 text-sm font-bold">
             AFED Digital
           </h2>
@@ -45,21 +45,21 @@ export function Overview({ onSelect }: OverviewProps) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full max-w-4xl animate-slide-up delay-200">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 w-full max-w-6xl animate-slide-up delay-200">
           {/* Card 1 - EDAFY Platform */}
           <button
             onClick={() => onSelect('platform')}
-            className="group relative bg-white/10 backdrop-blur-2xl border border-white/20 rounded-3xl p-8 shadow-2xl text-left transition-all duration-500 hover:bg-white/15 hover:border-purple-400/40 hover:scale-[1.03] hover:shadow-[0_0_60px_rgba(192,132,252,0.2)] cursor-pointer"
+            className="group relative bg-white/10 backdrop-blur-2xl border border-white/20 rounded-3xl p-7 shadow-2xl text-left transition-all duration-500 hover:bg-white/15 hover:border-purple-400/40 hover:scale-[1.03] hover:shadow-[0_0_60px_rgba(192,132,252,0.2)] cursor-pointer"
           >
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-purple-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="relative z-10">
-              <div className="w-14 h-14 rounded-2xl bg-purple-500/20 border border-purple-400/30 flex items-center justify-center mb-5 group-hover:bg-purple-500/30 transition-colors">
-                <MonitorIcon className="w-7 h-7 text-purple-300" />
+              <div className="w-12 h-12 rounded-2xl bg-purple-500/20 border border-purple-400/30 flex items-center justify-center mb-4 group-hover:bg-purple-500/30 transition-colors">
+                <MonitorIcon className="w-6 h-6 text-purple-300" />
               </div>
-              <h3 className="font-display font-bold text-xl mb-2 group-hover:text-purple-200 transition-colors">
+              <h3 className="font-display font-bold text-lg mb-2 group-hover:text-purple-200 transition-colors">
                 EDAFY Platform
               </h3>
-              <p className="font-body text-white/70 text-sm mb-6 leading-relaxed">
+              <p className="font-body text-white/70 text-sm mb-5 leading-relaxed">
                 The Subsurface Data Intelligence & Integration Platform — overview, ecosystem, architecture, and differentiators.
               </p>
               <div className="flex items-center gap-2 text-purple-300 text-sm font-medium">
@@ -72,21 +72,67 @@ export function Overview({ onSelect }: OverviewProps) {
           {/* Card 2 - EDAFY Asset */}
           <button
             onClick={() => onSelect('asset')}
-            className="group relative bg-white/10 backdrop-blur-2xl border border-white/20 rounded-3xl p-8 shadow-2xl text-left transition-all duration-500 hover:bg-white/15 hover:border-purple-400/40 hover:scale-[1.03] hover:shadow-[0_0_60px_rgba(192,132,252,0.2)] cursor-pointer"
+            className="group relative bg-white/10 backdrop-blur-2xl border border-white/20 rounded-3xl p-7 shadow-2xl text-left transition-all duration-500 hover:bg-white/15 hover:border-purple-400/40 hover:scale-[1.03] hover:shadow-[0_0_60px_rgba(192,132,252,0.2)] cursor-pointer"
           >
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-purple-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="relative z-10">
-              <div className="w-14 h-14 rounded-2xl bg-purple-500/20 border border-purple-400/30 flex items-center justify-center mb-5 group-hover:bg-purple-500/30 transition-colors">
-                <BarChart3Icon className="w-7 h-7 text-purple-300" />
+              <div className="w-12 h-12 rounded-2xl bg-purple-500/20 border border-purple-400/30 flex items-center justify-center mb-4 group-hover:bg-purple-500/30 transition-colors">
+                <BarChart3Icon className="w-6 h-6 text-purple-300" />
               </div>
-              <h3 className="font-display font-bold text-xl mb-2 group-hover:text-purple-200 transition-colors">
+              <h3 className="font-display font-bold text-lg mb-2 group-hover:text-purple-200 transition-colors">
                 EDAFY Asset
               </h3>
-              <p className="font-body text-white/70 text-sm mb-6 leading-relaxed">
+              <p className="font-body text-white/70 text-sm mb-5 leading-relaxed">
                 Insights into your Asset Life Cycle — asset management, modules, lifecycle, data flow, and dynamic navigation.
               </p>
               <div className="flex items-center gap-2 text-purple-300 text-sm font-medium">
                 <span>6 Slides</span>
+                <ChevronRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </div>
+          </button>
+
+          {/* Card 3 - EDAFY Plan */}
+          <button
+            onClick={() => onSelect('plan')}
+            className="group relative bg-white/10 backdrop-blur-2xl border border-white/20 rounded-3xl p-7 shadow-2xl text-left transition-all duration-500 hover:bg-white/15 hover:border-purple-400/40 hover:scale-[1.03] hover:shadow-[0_0_60px_rgba(192,132,252,0.2)] cursor-pointer"
+          >
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-purple-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative z-10">
+              <div className="w-12 h-12 rounded-2xl bg-purple-500/20 border border-purple-400/30 flex items-center justify-center mb-4 group-hover:bg-purple-500/30 transition-colors">
+                <ClipboardListIcon className="w-6 h-6 text-purple-300" />
+              </div>
+              <h3 className="font-display font-bold text-lg mb-2 group-hover:text-purple-200 transition-colors">
+                EDAFY Plan
+              </h3>
+              <p className="font-body text-white/70 text-sm mb-5 leading-relaxed">
+                AI-Driven Upstream E&P Project Management — risk prediction, forecasting, conversational AI, and more.
+              </p>
+              <div className="flex items-center gap-2 text-purple-300 text-sm font-medium">
+                <span>10 Slides</span>
+                <ChevronRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </div>
+          </button>
+
+          {/* Card 4 - EDAFY Basin Hub */}
+          <button
+            onClick={() => onSelect('basin')}
+            className="group relative bg-white/10 backdrop-blur-2xl border border-white/20 rounded-3xl p-7 shadow-2xl text-left transition-all duration-500 hover:bg-white/15 hover:border-purple-400/40 hover:scale-[1.03] hover:shadow-[0_0_60px_rgba(192,132,252,0.2)] cursor-pointer"
+          >
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-purple-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative z-10">
+              <div className="w-12 h-12 rounded-2xl bg-purple-500/20 border border-purple-400/30 flex items-center justify-center mb-4 group-hover:bg-purple-500/30 transition-colors">
+                <GlobeIcon className="w-6 h-6 text-purple-300" />
+              </div>
+              <h3 className="font-display font-bold text-lg mb-2 group-hover:text-purple-200 transition-colors">
+                EDAFY Basin Hub
+              </h3>
+              <p className="font-body text-white/70 text-sm mb-5 leading-relaxed">
+                AI-Ready Geo-Basin Intelligence for Exploration & Appraisal — knowledge graph, data architecture, and basin insights.
+              </p>
+              <div className="flex items-center gap-2 text-purple-300 text-sm font-medium">
+                <span>8 Slides</span>
                 <ChevronRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>

@@ -12,8 +12,14 @@ export default {
         secondary: '#a78bfa',
         'bg-dark': '#1a1025',
         'bg-card': 'rgba(255, 255, 255, 0.1)',
+        gold: {
+          500: '#f59e0b',
+          400: '#fbbf24',
+          300: '#fcd34d',
+        },
       },
       fontFamily: {
+        inter: ['Inter', 'sans-serif'],
         display: ['"Inter"', 'sans-serif'],
         body: ['"Inter"', 'sans-serif'],
       },
