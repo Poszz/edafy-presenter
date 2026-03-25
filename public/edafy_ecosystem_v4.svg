@@ -1,0 +1,75 @@
+<svg width="100%" viewBox="0 0 680 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <radialGradient id="hubGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1DB97A" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0D7A52" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="680" height="440" fill="#1E1B2E" rx="12" style="fill:rgb(30, 27, 46);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Orbit ellipses -->
+  <ellipse cx="340" cy="210" rx="190" ry="80" fill="none" stroke="#8B7FA8" stroke-width="0.8" opacity="0.4" style="fill:none;stroke:rgb(139, 127, 168);color:rgb(0, 0, 0);stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.4;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <ellipse cx="340" cy="210" rx="270" ry="115" fill="none" stroke="#8B7FA8" stroke-width="0.8" opacity="0.25" style="fill:none;stroke:rgb(139, 127, 168);color:rgb(0, 0, 0);stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.25;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- EDAFY Data → EDAFY Plan (straight down, stops at hub edge y=150) -->
+  <line x1="340" y1="100" x2="340" y2="148" stroke="#1DB97A" stroke-width="2" marker-end="url(#arrow)" style="fill:rgb(0, 0, 0);stroke:rgb(29, 185, 122);color:rgb(0, 0, 0);stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- EDAFY Plan → EDAFY AI (straight left, from hub edge x=280) -->
+  <line x1="280" y1="210" x2="164" y2="210" stroke="#1DB97A" stroke-width="2" marker-end="url(#arrow)" style="fill:rgb(0, 0, 0);stroke:rgb(29, 185, 122);color:rgb(0, 0, 0);stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- EDAFY Plan → EDAFY Asset (straight right, from hub edge x=400) -->
+  <line x1="400" y1="210" x2="518" y2="210" stroke="#1DB97A" stroke-width="2" marker-end="url(#arrow)" style="fill:rgb(0, 0, 0);stroke:rgb(29, 185, 122);color:rgb(0, 0, 0);stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- 
+    EDAFY Plan <-> EDAFY Insights: two straight vertical parallel arrows, offset left/right
+    Hub bottom at y=270. Insights top at y=322. Gap: y=270 to y=322.
+    Left arrow (Plan→Insights): x=330, right arrow (Insights→Plan): x=350
+  -->
+  <!-- Plan → Insights (left offset, downward) -->
+  <line x1="330" y1="271" x2="330" y2="320" stroke="#1DB97A" stroke-width="2" marker-end="url(#arrow)" style="fill:rgb(0, 0, 0);stroke:rgb(29, 185, 122);color:rgb(0, 0, 0);stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <!-- Insights → Plan (right offset, upward) -->
+  <line x1="350" y1="320" x2="350" y2="271" stroke="#1DB97A" stroke-width="2" marker-end="url(#arrow)" style="fill:rgb(0, 0, 0);stroke:rgb(29, 185, 122);color:rgb(0, 0, 0);stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Central hub -->
+  <circle cx="340" cy="210" r="72" fill="#1DB97A" opacity="0.08" style="fill:rgb(29, 185, 122);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.08;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <circle cx="340" cy="210" r="60" fill="url(#hubGlow)" style="stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <text x="340" y="204" text-anchor="middle" fill="white" font-size="16" font-weight="700" font-family="sans-serif" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:16px;font-weight:700;text-anchor:middle;dominant-baseline:auto">EDAFY</text>
+  <text x="340" y="222" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="13" font-family="sans-serif" style="fill:rgba(255, 255, 255, 0.75);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:13px;font-weight:400;text-anchor:middle;dominant-baseline:auto">Plan</text>
+
+  <!-- TOP NODE: EDAFY Data -->
+  <rect x="268" y="40" width="144" height="42" rx="8" fill="#2A2547" stroke="#5B4FA0" stroke-width="0.8" style="fill:rgb(42, 37, 71);stroke:rgb(91, 79, 160);color:rgb(0, 0, 0);stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <text x="340" y="66" text-anchor="middle" fill="white" font-size="14" font-weight="700" font-family="sans-serif" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:14px;font-weight:700;text-anchor:middle;dominant-baseline:auto">EDAFY Data</text>
+  <text x="422" y="52" fill="#9B93B8" font-size="11" font-family="sans-serif" style="fill:rgb(155, 147, 184);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:11px;font-weight:400;text-anchor:start;dominant-baseline:auto">Feeds subsurface data (well</text>
+  <text x="422" y="66" fill="#9B93B8" font-size="11" font-family="sans-serif" style="fill:rgb(155, 147, 184);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:11px;font-weight:400;text-anchor:start;dominant-baseline:auto">logs, seismic, GIS) into</text>
+  <text x="422" y="80" fill="#9B93B8" font-size="11" font-family="sans-serif" style="fill:rgb(155, 147, 184);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:11px;font-weight:400;text-anchor:start;dominant-baseline:auto">project planning.</text>
+
+  <!-- BOTTOM NODE: EDAFY Insights -->
+  <rect x="252" y="322" width="168" height="42" rx="8" fill="#2A2547" stroke="#5B4FA0" stroke-width="0.8" style="fill:rgb(42, 37, 71);stroke:rgb(91, 79, 160);color:rgb(0, 0, 0);stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <text x="336" y="348" text-anchor="middle" fill="white" font-size="14" font-weight="700" font-family="sans-serif" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:14px;font-weight:700;text-anchor:middle;dominant-baseline:auto">EDAFY Insights</text>
+  <text x="432" y="330" fill="#9B93B8" font-size="11" font-family="sans-serif" style="fill:rgb(155, 147, 184);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:11px;font-weight:400;text-anchor:start;dominant-baseline:auto">Draws from Plan data to build</text>
+  <text x="432" y="344" fill="#9B93B8" font-size="11" font-family="sans-serif" style="fill:rgb(155, 147, 184);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:11px;font-weight:400;text-anchor:start;dominant-baseline:auto">advanced analytics</text>
+  <text x="432" y="358" fill="#9B93B8" font-size="11" font-family="sans-serif" style="fill:rgb(155, 147, 184);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:11px;font-weight:400;text-anchor:start;dominant-baseline:auto">dashboards.</text>
+
+  <!-- LEFT NODE: EDAFY AI -->
+  <rect x="44" y="190" width="118" height="42" rx="8" fill="#2A2547" stroke="#5B4FA0" stroke-width="0.8" style="fill:rgb(42, 37, 71);stroke:rgb(91, 79, 160);color:rgb(0, 0, 0);stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <text x="103" y="216" text-anchor="middle" fill="white" font-size="14" font-weight="700" font-family="sans-serif" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:14px;font-weight:700;text-anchor:middle;dominant-baseline:auto">EDAFY AI</text>
+  <text x="44" y="248" fill="#9B93B8" font-size="11" font-family="sans-serif" style="fill:rgb(155, 147, 184);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:11px;font-weight:400;text-anchor:start;dominant-baseline:auto">ML models powering risk</text>
+  <text x="44" y="262" fill="#9B93B8" font-size="11" font-family="sans-serif" style="fill:rgb(155, 147, 184);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:11px;font-weight:400;text-anchor:start;dominant-baseline:auto">scoring, forecasting, and</text>
+  <text x="44" y="276" fill="#9B93B8" font-size="11" font-family="sans-serif" style="fill:rgb(155, 147, 184);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:11px;font-weight:400;text-anchor:start;dominant-baseline:auto">optimization.</text>
+
+  <!-- RIGHT NODE: EDAFY Asset -->
+  <rect x="520" y="190" width="130" height="42" rx="8" fill="#2A2547" stroke="#5B4FA0" stroke-width="0.8" style="fill:rgb(42, 37, 71);stroke:rgb(91, 79, 160);color:rgb(0, 0, 0);stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <text x="585" y="216" text-anchor="middle" fill="white" font-size="14" font-weight="700" font-family="sans-serif" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:14px;font-weight:700;text-anchor:middle;dominant-baseline:auto">EDAFY Asset</text>
+  <text x="520" y="248" fill="#9B93B8" font-size="11" font-family="sans-serif" style="fill:rgb(155, 147, 184);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:11px;font-weight:400;text-anchor:start;dominant-baseline:auto">Project plans inform</text>
+  <text x="520" y="262" fill="#9B93B8" font-size="11" font-family="sans-serif" style="fill:rgb(155, 147, 184);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:11px;font-weight:400;text-anchor:start;dominant-baseline:auto">operations; live production</text>
+  <text x="520" y="276" fill="#9B93B8" font-size="11" font-family="sans-serif" style="fill:rgb(155, 147, 184);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:11px;font-weight:400;text-anchor:start;dominant-baseline:auto">data feeds back.</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="408" width="680" height="32" fill="#171527" opacity="0.9" style="fill:rgb(23, 21, 39);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.9;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <rect x="0" y="408" width="680" height="0.5" fill="#5B4FA0" opacity="0.5" style="fill:rgb(91, 79, 160);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <text x="340" y="429" text-anchor="middle" fill="#7B73A0" font-size="11" font-family="sans-serif" style="fill:rgb(123, 115, 160);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:sans-serif;font-size:11px;font-weight:400;text-anchor:middle;dominant-baseline:auto">Integrated via RESTful APIs and strictly OSDU/PPDM compliant data standards.</text>
+</svg>

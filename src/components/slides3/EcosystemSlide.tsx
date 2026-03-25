@@ -83,7 +83,7 @@ export function EcosystemSlide({ isActive }: EcosystemSlideProps) {
           {/* Diagram SVG Image */}
           <div className="relative w-full h-full flex items-center justify-center p-4 md:p-8">
             <img
-              src="./edafy_plan_ecosystem_arrows_v2.svg"
+              src="./edafy_ecosystem_v4.svg"
               alt="EDAFY Ecosystem Diagram — EDAFY Plan at center connected to EDAFY Data, EDAFY AI, EDAFY Asset, and EDAFY Insights"
               className="w-full h-full object-contain"
               style={{

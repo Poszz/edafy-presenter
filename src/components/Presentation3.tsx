@@ -1,17 +1,18 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { ChevronUpIcon, ChevronDownIcon, HomeIcon } from 'lucide-react';
-import { TitleSlide3 } from './slides3/TitleSlide3';
+import { TitleSlide3 } from './slides3/TitleSlide';
 import { DilemmaSlide } from './slides3/DilemmaSlide';
 import { PlatformSlide } from './slides3/PlatformSlide';
 import { EcosystemSlide } from './slides3/EcosystemSlide';
 import { AnatomySlide } from './slides3/AnatomySlide';
+import { AIIntelligenceSlide } from './slides3/AIIntelligenceSlide';
 import { RiskSlide } from './slides3/RiskSlide';
 import { ForecastingSlide } from './slides3/ForecastingSlide';
 import { ConversationalSlide } from './slides3/ConversationalSlide';
 import { AdvantageSlide } from './slides3/AdvantageSlide';
 import { EndSlide } from './slides3/EndSlide';
 
-const TOTAL_SLIDES = 10;
+const TOTAL_SLIDES = 11;
 
 interface Presentation3Props {
   onBack: () => void;
@@ -124,11 +125,12 @@ export function Presentation3({ onBack }: Presentation3Props) {
     <PlatformSlide isActive={activeSlide === 2} />,
     <EcosystemSlide isActive={activeSlide === 3} />,
     <AnatomySlide isActive={activeSlide === 4} />,
-    <RiskSlide isActive={activeSlide === 5} />,
-    <ForecastingSlide isActive={activeSlide === 6} />,
-    <ConversationalSlide isActive={activeSlide === 7} />,
-    <AdvantageSlide isActive={activeSlide === 8} />,
-    <EndSlide isActive={activeSlide === 9} />,
+    <AIIntelligenceSlide isActive={activeSlide === 5} />,
+    <RiskSlide isActive={activeSlide === 6} />,
+    <ForecastingSlide isActive={activeSlide === 7} />,
+    <ConversationalSlide isActive={activeSlide === 8} />,
+    <AdvantageSlide isActive={activeSlide === 9} />,
+    <EndSlide isActive={activeSlide === 10} />,
   ];
 
   return (

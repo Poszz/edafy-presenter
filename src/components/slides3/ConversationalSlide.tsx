@@ -46,7 +46,7 @@ export function ConversationalSlide({ isActive }: ConversationalSlideProps) {
         
         {/* Left Content */}
         <div
-          className={`${`${`${`w-full md:w-1/2 flex flex-col gap-6 ${isActive ? 'animate-fade-in-left delay-200' : 'opacity-0'}`} ml-[100px] mr-[100px]`} ml-[200px] mr-[0px]`} ml-[170px]`}>
+          className={`${`${`${`${`${`w-full md:w-1/2 flex flex-col gap-6 ${isActive ? 'animate-fade-in-left delay-200' : 'opacity-0'}`} ml-[100px] mr-[100px]`} ml-[200px] mr-[0px]`} ml-[170px]`} ml-[180px]`} ml-[0px] mr-[0px]`}>
           
           <h2
             className="font-inter font-extrabold text-white leading-tight ml-[0px] mr-[0px]"
