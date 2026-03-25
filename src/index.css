@@ -400,6 +400,50 @@ img {
         grid-template-columns: 1fr;
     }
 }
+/* ===========================================
+   EDAFY AI & HUB ADDITIONAL STYLES
+   =========================================== */
+.slide-bg-hub {
+    background-image: url('https://cdn.magicpatterns.com/uploads/cfFsnnhxLibTHWcmv44PT6/AVC_Lumina_2026.png');
+    background-size: cover;
+    background-position: center;
+}
+/* Image Carousel */
+.image-carousel-item {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out, filter 0.8s ease-in-out;
+}
+.image-carousel-item.active {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: none;
+    z-index: 3;
+}
+.image-carousel-item.next {
+    opacity: 0.4;
+    transform: scale(0.88) translateX(30px) translateY(15px);
+    filter: blur(1px);
+    z-index: 2;
+}
+.image-carousel-item.prev {
+    opacity: 0.25;
+    transform: scale(0.78) translateX(-30px) translateY(25px);
+    filter: blur(2px);
+    z-index: 1;
+}
+.carousel-dot {
+    transition: all 0.3s ease;
+}
+.carousel-dot.active {
+    background: rgba(168, 85, 247, 1);
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.8);
+    transform: scale(1.3);
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
