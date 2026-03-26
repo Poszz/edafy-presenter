@@ -1,12 +1,11 @@
 import React from 'react';
-import { PlayIcon } from 'lucide-react';
 export function VideoSlide() {
   return (
     <section
       className="slide text-white"
       style={{
         backgroundImage:
-        'url(https://cdn.magicpatterns.com/uploads/oNo2BAMCGVU39vB2KQpoNK/image.png)',
+        'url(/bg-slide-main.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>
@@ -30,33 +29,13 @@ export function VideoSlide() {
               {/* Subtle screen reflection */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent pointer-events-none z-10" />
 
-              {/* Video placeholder — replace the div below with your <video> or <iframe> */}
-              <div className="w-full h-full flex flex-col items-center justify-center gap-4 relative z-0">
-                {/* Play button */}
-                <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-xl border border-white/30 flex items-center justify-center hover:bg-white/20 hover:scale-110 transition-all duration-300 cursor-pointer shadow-[0_0_30px_rgba(192,132,252,0.3)]">
-                  <PlayIcon className="w-8 h-8 text-white ml-1" />
-                </div>
-                <p className="text-white/50 text-sm font-body tracking-wide">
-                  Click to play video
-                </p>
-              </div>
-
-              {/*
-                TO ADD YOUR VIDEO: Replace the placeholder div above with one of these:
-                For a video file:
-                <video
-                className="w-full h-full object-cover"
+              <video
+                className="w-full h-full object-contain relative z-0"
                 controls
-                src="YOUR_VIDEO_URL_HERE"
-                />
-                For a YouTube embed:
-                <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                />
-                */}
+                playsInline
+                preload="auto"
+                src="/videos/afed-montage.mp4"
+              />
             </div>
           </div>
 

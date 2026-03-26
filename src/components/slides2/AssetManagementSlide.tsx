@@ -34,7 +34,7 @@ export function AssetManagementSlide() {
     const textureLoader = new THREE.TextureLoader();
     // Load earth night texture (shows continent outlines as city lights on dark)
     const earthTexture = textureLoader.load(
-      'https://unpkg.com/three-globe@2.31.1/example/img/earth-night.jpg'
+      '/earth-night.jpg'
     );
     earthTexture.colorSpace = THREE.SRGBColorSpace;
     const earthMaterial = new THREE.MeshStandardMaterial({
@@ -411,7 +411,7 @@ export function AssetManagementSlide() {
       className="slide text-white"
       style={{
         backgroundImage:
-        'url(https://cdn.magicpatterns.com/uploads/oNo2BAMCGVU39vB2KQpoNK/image.png)',
+        'url(/bg-slide-main.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>

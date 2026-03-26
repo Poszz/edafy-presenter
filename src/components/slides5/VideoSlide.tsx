@@ -6,7 +6,7 @@ export function VideoSlide() {
       className="slide text-white"
       style={{
         backgroundImage:
-        'url(https://cdn.magicpatterns.com/uploads/oNo2BAMCGVU39vB2KQpoNK/image.png)',
+        'url(/bg-slide-main.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>

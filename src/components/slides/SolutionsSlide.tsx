@@ -5,7 +5,7 @@ export function SolutionsSlide() {
       className="slide text-white"
       style={{
         backgroundImage:
-        'url(https://cdn.magicpatterns.com/uploads/oNo2BAMCGVU39vB2KQpoNK/image.png)',
+        'url(/bg-slide-main.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>
@@ -55,9 +55,7 @@ export function SolutionsSlide() {
               <div className="flex-1 flex flex-col gap-4">
                 <div className="bg-purple-500/30 backdrop-blur-xl border border-purple-400/30 rounded-xl p-4 hover:bg-purple-500/50 hover:scale-[1.04] hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] hover:border-purple-300/50 transition-all duration-300 cursor-pointer animate-slide-up delay-200 shadow-lg group">
                   <h4 className="font-display font-bold text-white text-base mb-1 flex items-center gap-2">
-                    <span className="text-xl group-hover:scale-125 transition-transform duration-300">
-                      🌊
-                    </span>
+                    <img src="/EdafyAI.png" alt="EDAFY AI" className="w-7 h-7 object-contain group-hover:scale-125 transition-transform duration-300" />
                     <span className="group-hover:text-purple-200 transition-colors">
                       EDAFY AI
                     </span>
@@ -69,9 +67,7 @@ export function SolutionsSlide() {
                 </div>
                 <div className="bg-purple-600/30 backdrop-blur-xl border border-purple-400/30 rounded-xl p-4 hover:bg-purple-600/50 hover:scale-[1.04] hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] hover:border-purple-300/50 transition-all duration-300 cursor-pointer animate-slide-up delay-300 shadow-lg group">
                   <h4 className="font-display font-bold text-white text-base mb-1 flex items-center gap-2">
-                    <span className="text-xl group-hover:scale-125 transition-transform duration-300">
-                      🌐
-                    </span>
+                    <img src="/EdafyHub.png" alt="EDAFY HUB" className="w-7 h-7 object-contain group-hover:scale-125 transition-transform duration-300" />
                     <span className="group-hover:text-purple-200 transition-colors">
                       EDAFY HUB Platform
                     </span>
@@ -87,17 +83,17 @@ export function SolutionsSlide() {
               <div className="flex-1 flex flex-col sm:flex-row gap-4">
                 {[
                 {
-                  emoji: '📚',
+                  icon: '/EdafyData.png',
                   name: 'EDAFY DATA',
                   desc: 'One single source of truth for all your subsurface data'
                 },
                 {
-                  emoji: '⚙️',
+                  icon: '/EdafyAsset.png',
                   name: 'EDAFY ASSET',
                   desc: 'Turns production complexity into clarity in a unified platform'
                 },
                 {
-                  emoji: '📊',
+                  icon: '/EdafyPlan.png',
                   name: 'EDAFY PLAN',
                   desc: 'Clear visibility of all your upstream project management'
                 }].
@@ -108,11 +104,9 @@ export function SolutionsSlide() {
                   style={{
                     animationDelay: `${400 + idx * 100}ms`
                   }}>
-                  
+
                     <h4 className="font-display font-bold text-white text-base mb-2 flex items-center gap-2">
-                      <span className="text-xl group-hover:scale-125 transition-transform duration-300">
-                        {item.emoji}
-                      </span>
+                      <img src={item.icon} alt={item.name} className="w-7 h-7 object-contain group-hover:scale-125 transition-transform duration-300" />
                       <span className="group-hover:text-purple-200 transition-colors">
                         {item.name}
                       </span>

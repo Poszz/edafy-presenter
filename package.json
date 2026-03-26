@@ -1,6 +1,6 @@
 {
   "name": "edafy-platform-slides",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "Edafy Platform – OTC Malaysia 2026 Presentation",
   "private": true,
   "type": "module",
@@ -46,13 +46,14 @@
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
       "allowElevation": true,
+      "installerSidebar": null,
       "deleteAppDataOnUninstall": true,
       "guid": "edafy-presenter-2026-otc",
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "shortcutName": "EDAFY Presenter",
       "uninstallDisplayName": "EDAFY Presenter",
-      "include": null,
+      "include": "build/installer.nsh",
       "perMachine": true
     }
   },

@@ -6,7 +6,7 @@ export function TitleSlide() {
       className="slide text-white"
       style={{
         backgroundImage:
-        'url(https://cdn.magicpatterns.com/uploads/oNo2BAMCGVU39vB2KQpoNK/image.png)',
+        'url(/bg-slide-main.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>
@@ -91,24 +91,13 @@ export function TitleSlide() {
             {/* Shimmer effect overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-shimmer rounded-2xl pointer-events-none z-10" />
 
-            {/* Video Placeholder — replace with your video element */}
-            <div className="w-full h-full flex flex-col items-center justify-center rounded-2xl bg-gray-900/60 border-2 border-dashed border-purple-400/40 relative z-0">
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-purple-500/20 flex items-center justify-center mb-4 group-hover:bg-purple-500/30 transition-colors">
-                <svg
-                  className="w-8 h-8 md:w-10 md:h-10 text-purple-300 ml-1"
-                  viewBox="0 0 24 24"
-                  fill="currentColor">
-                  
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-              <p className="font-body text-sm md:text-base text-white/50 font-medium">
-                Video Placeholder
-              </p>
-              <p className="font-body text-xs text-white/30 mt-1">
-                Replace with your video
-              </p>
-            </div>
+            <video
+              className="w-full h-full object-contain rounded-2xl relative z-0"
+              controls
+              playsInline
+              preload="auto"
+              src="/videos/edafy-data-montage.mp4"
+            />
           </div>
         </div>
       </div>

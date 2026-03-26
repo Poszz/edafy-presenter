@@ -1,12 +1,18 @@
-/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-
 /* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
 /* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+/* Local Inter font — bundled for offline use */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400 900;
+    font-display: swap;
+    src: url('/fonts/Inter-Variable.woff2') format('woff2');
+}
 
 /* ===========================================
    SNAP SCROLLING & VIEWPORT FITTING: MANDATORY
@@ -75,7 +81,7 @@ img {
 }
 /* Custom Utilities */
 .slide-bg {
-    background-image: url('https://cdn.magicpatterns.com/uploads/oNo2BAMCGVU39vB2KQpoNK/image.png');
+    background-image: url('/bg-slide-main.png');
     background-size: cover;
     background-position: center;
 }
@@ -232,7 +238,7 @@ img {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s ease;
-    background: url('https://cdn.magicpatterns.com/uploads/fLXkcpmYuBVow4CJnjFnic/7.png') center/cover no-repeat;
+    background: url('/bg-slide-basin.png') center/cover no-repeat;
 }
 .slide4.slide-active {
     opacity: 1;
@@ -364,17 +370,24 @@ img {
    RESPONSIVE BREAKPOINTS - Height-based
    =========================================== */
 
-/* Short screens (< 700px height) */
-@media (max-height: 700px) {
+/* Short screens (< 800px height) — covers 3840x2160 @ 300% zoom (720px effective) */
+@media (max-height: 800px) {
     :root {
-        --slide-padding: clamp(1rem, 4vw, 3rem);
-        --content-gap: clamp(0.75rem, 2vw, 2rem);
-        --title-size: clamp(1.75rem, 5vw, 4rem);
-        --h2-size: clamp(1.25rem, 3.5vw, 2.5rem);
+        --slide-padding: clamp(0.75rem, 3vw, 2.5rem);
+        --content-gap: clamp(0.5rem, 1.5vw, 1.5rem);
+        --element-gap: clamp(0.25rem, 1vw, 1rem);
+        --title-size: clamp(1.5rem, 4.5vw, 3.5rem);
+        --h2-size: clamp(1.25rem, 3vw, 2.25rem);
+        --h3-size: clamp(1rem, 2vw, 1.5rem);
+        --body-size: clamp(0.8rem, 1.2vw, 1.1rem);
+        --small-size: clamp(0.7rem, 0.9vw, 0.9rem);
+    }
+    img {
+        max-height: min(45vh, 350px);
     }
 }
-/* Very short (< 600px height) */
-@media (max-height: 600px) {
+/* Very short (< 650px height) */
+@media (max-height: 650px) {
     :root {
         --slide-padding: clamp(0.75rem, 3vw, 2rem);
         --content-gap: clamp(0.5rem, 1.5vw, 1.5rem);
@@ -404,7 +417,7 @@ img {
    EDAFY AI & HUB ADDITIONAL STYLES
    =========================================== */
 .slide-bg-hub {
-    background-image: url('https://cdn.magicpatterns.com/uploads/cfFsnnhxLibTHWcmv44PT6/AVC_Lumina_2026.png');
+    background-image: url('/bg-slide-hub.png');
     background-size: cover;
     background-position: center;
 }

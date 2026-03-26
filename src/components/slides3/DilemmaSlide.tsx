@@ -9,7 +9,7 @@ export function DilemmaSlide({ isActive }: DilemmaSlideProps) {
       className="slide relative overflow-hidden"
       style={{
         backgroundImage:
-        'url(https://cdn.magicpatterns.com/uploads/rDHXLm66BWR6q7Pi1g3oF3/7.png)',
+        'url(/bg-slide-plan.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>
